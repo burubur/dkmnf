@@ -9,9 +9,11 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Program Rutin", href: "#program-rutin" },
-    { label: "Program Jangka Panjang", href: "#program-jangka-panjang", highlight: true },
-    { label: "Laporan Keuangan", href: "#laporan-keuangan" },
+    { label: "Jadwal Sholat", href: "#jadwal" },
+    { label: "Program Rutin", href: "#program" },
+    { label: "Program Jangka Panjang", href: "#program-panjang", highlight: true },
+    { label: "Agenda & Warta", href: "#agenda" },
+    { label: "Transparansi Kas", href: "#laporan" },
   ];
 
   const handleInfaqClick = () => {
@@ -22,22 +24,18 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group text-left">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center shadow-md shadow-emerald-700/20 group-hover:scale-105 transition-transform">
+          <a href="#beranda" className="flex items-center gap-3 group text-left">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center shadow-md shadow-emerald-600/20 group-hover:scale-105 transition-transform">
               <Landmark className="w-6 h-6 text-amber-300" />
             </div>
             <div>
-              <div className="font-extrabold text-base sm:text-lg leading-tight text-emerald-950 group-hover:text-emerald-700 transition-colors">
-                Masjid Nurul Falah
-              </div>
-              <div className="text-xs text-slate-500 font-medium tracking-wide">
-                Lingkungan Sukatani, Cisolok
-              </div>
+              <div className="font-bold text-lg leading-tight text-[#064e3b]">Masjid Nurul Falah</div>
+              <div className="text-xs text-slate-500 font-medium tracking-wide">Lingkungan Sukatani</div>
             </div>
           </a>
 
@@ -49,9 +47,9 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="px-3.5 py-2 rounded-xl text-emerald-800 bg-emerald-50 hover:bg-emerald-100 transition flex items-center gap-1.5 font-bold"
+                    className="px-3 py-2 rounded-lg text-emerald-800 bg-emerald-50 hover:bg-emerald-100 transition flex items-center gap-1 font-bold"
                   >
-                    <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    <TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
                     <span>{link.label}</span>
                   </a>
                 );
@@ -60,7 +58,7 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="px-3.5 py-2 rounded-xl hover:text-emerald-700 hover:bg-emerald-50/70 transition"
+                  className="px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition"
                 >
                   {link.label}
                 </a>
@@ -73,7 +71,7 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
             <button
               type="button"
               onClick={handleInfaqClick}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm shadow-md shadow-emerald-800/20 hover:shadow-lg transition cursor-pointer active:scale-95"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#059669] hover:bg-[#047857] text-white font-semibold text-sm shadow-sm hover:shadow-md transition cursor-pointer active:scale-95"
             >
               <HeartHandshake className="w-4 h-4 text-amber-300" />
               <span>Infaq / Wakaf</span>
@@ -84,7 +82,7 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none"
+            className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none"
             aria-label="Toggle Mobile Menu"
           >
             {mobileMenuOpen ? (
@@ -97,16 +95,16 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-100 py-3 space-y-1.5 animate-in slide-in-from-top-2 duration-150">
+          <div className="md:hidden border-t border-slate-100 py-3 space-y-1 animate-in slide-in-from-top-2 duration-150">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3.5 py-2.5 rounded-lg text-sm font-semibold transition ${
+                className={`block px-3 py-2 rounded-md text-base font-medium transition ${
                   link.highlight
-                    ? "text-emerald-900 bg-emerald-50 font-bold"
-                    : "text-slate-700 hover:bg-emerald-50/60"
+                    ? "text-emerald-800 bg-emerald-50 font-bold"
+                    : "text-slate-700 hover:bg-emerald-50"
                 }`}
               >
                 {link.label}
@@ -116,10 +114,10 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
               <button
                 type="button"
                 onClick={handleInfaqClick}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700 text-white font-bold text-sm shadow cursor-pointer active:scale-95"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#059669] hover:bg-[#047857] text-white font-medium text-sm shadow cursor-pointer active:scale-95"
               >
                 <HeartHandshake className="w-4 h-4 text-amber-300" />
-                <span>Infaq / Wakaf</span>
+                <span>Infaq & Wakaf</span>
               </button>
             </div>
           </div>

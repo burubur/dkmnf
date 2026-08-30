@@ -2,10 +2,27 @@ import React, { useState } from "react";
 import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/home/HeroSection";
+import { PrayerTimesWidget } from "@/components/home/PrayerTimesWidget";
+import { LongTermProgramSection } from "@/components/home/LongTermProgramSection";
+import { RoutineProgramSection } from "@/components/home/RoutineProgramSection";
+import { AgendaSection } from "@/components/home/AgendaSection";
+import { FinancialReportSection } from "@/components/home/FinancialReportSection";
+import { OrganizationSection } from "@/components/home/OrganizationSection";
+import { Footer } from "@/components/layout/Footer";
 import { InfaqModal } from "@/components/infaq/InfaqModal";
+import { EventModal } from "@/components/home/EventModal";
+import { LayananModal } from "@/components/home/LayananModal";
 
 export function App() {
   const [isInfaqOpen, setIsInfaqOpen] = useState(false);
+  const [isEventOpen, setIsEventOpen] = useState(false);
+  const [isLayananOpen, setIsLayananOpen] = useState(false);
+  const [selectedEventTitle, setSelectedEventTitle] = useState("");
+
+  const handleRegisterEvent = (title: string) => {
+    setSelectedEventTitle(title);
+    setIsEventOpen(true);
+  };
 
   return (
     <div className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-800 selection:bg-emerald-600 selection:text-white font-sans antialiased">
@@ -15,26 +32,31 @@ export function App() {
       {/* 2. Header Navigation Bar */}
       <Navbar onOpenInfaq={() => setIsInfaqOpen(true)} />
 
-      {/* 3. Hero Section with .bg-pattern background */}
+      {/* 3. Main Content Sections */}
       <main className="flex-1">
         <HeroSection onOpenInfaq={() => setIsInfaqOpen(true)} />
+        <PrayerTimesWidget />
+        <LongTermProgramSection
+          onOpenWakaf={() => setIsInfaqOpen(true)}
+          onOpenLayanan={() => setIsLayananOpen(true)}
+        />
+        <RoutineProgramSection />
+        <AgendaSection onRegisterEvent={handleRegisterEvent} />
+        <FinancialReportSection />
+        <OrganizationSection />
       </main>
 
-      {/* 4. Infaq & Wakaf Bank Accounts Modal */}
-      <InfaqModal open={isInfaqOpen} onOpenChange={setIsInfaqOpen} />
+      {/* 4. Footer */}
+      <Footer />
 
-      {/* 5. Footer */}
-      <footer className="bg-[#064e3b] text-slate-300 text-xs py-8 border-t border-[#065f46]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <div>
-            <div className="text-white font-bold text-sm mb-1">Masjid Nurul Falah Sukatani</div>
-            <p className="text-emerald-200/80 text-xs">Kp. Sukatani RT 02 RW 05, Kelurahan Wangunsari, Cisolok, Kabupaten Sukabumi, Jawa Barat.</p>
-          </div>
-          <div className="text-emerald-300/80 text-xs">
-            © 2026 DKM Masjid Nurul Falah. Amanah & Transparan.
-          </div>
-        </div>
-      </footer>
+      {/* 5. Modals */}
+      <InfaqModal open={isInfaqOpen} onOpenChange={setIsInfaqOpen} />
+      <EventModal
+        open={isEventOpen}
+        eventTitle={selectedEventTitle}
+        onOpenChange={setIsEventOpen}
+      />
+      <LayananModal open={isLayananOpen} onOpenChange={setIsLayananOpen} />
     </div>
   );
 }

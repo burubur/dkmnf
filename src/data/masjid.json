@@ -1,14 +1,15 @@
 {
   "name": "Masjid Nurul Falah Sukatani",
   "arabicName": "مَسْجِدُ نُوْرِ الْفَلَاحِ",
-  "tagline": "Pembangunan Masjid Permanen 2 Lantai",
+  "tagline": "Pembangunan Masjid Permanen 2 Lantai & Pusat Dakwah Umat",
   "address": {
     "kampung": "Kp. Sukatani RT 02 RW 05",
     "kelurahan": "Wangunsari",
     "kecamatan": "Cisolok",
     "kabupaten": "Sukabumi",
     "provinsi": "Jawa Barat",
-    "kodepos": "43366"
+    "kodepos": "43366",
+    "fullAddress": "Jl. Masjid Nurul Falah No. 01, Kp. Sukatani RT 02 RW 05, Wangunsari, Cisolok, Sukabumi"
   },
   "coordinates": {
     "latitude": -6.9458,
@@ -30,12 +31,123 @@
       "accountNumber": "7203516578",
       "accountHolder": "MASJID NURUL FALAH SUKATANI",
       "isPrimary": true,
+      "purpose": "Operasional, Infaq & Wakaf Pembangunan",
       "color": "emerald"
     }
   ],
   "contacts": {
     "phone": "+6281234567890",
     "whatsapp": "6281234567890",
-    "whatsappUrl": "https://wa.me/6281234567890?text=Assalamu%27alaikum%20Pengurus%20DKM%20Masjid%20Nurul%20Falah%2C%20saya%20ingin%20konfirmasi%20infaq%2Fwakaf"
+    "whatsappUrl": "https://wa.me/6281234567890?text=Assalamu%27alaikum%20Pengurus%20DKM%20Masjid%20Nurul%20Falah%2C%20saya%20ingin%20konfirmasi%20infaq%2Fwakaf",
+    "dkmLeader": {
+      "role": "Ketua DKM & Pembangunan",
+      "name": "Ust. H. M. Syarifuddin",
+      "phone": "0812-8899-001"
+    },
+    "secretariat": {
+      "role": "Sekretariat & Pendaftaran Dakwah",
+      "name": "Bpk. Ahmad Fauzan, S.T.",
+      "phone": "0813-1122-334"
+    },
+    "funeralService": {
+      "role": "Pelayanan Jenazah / Rukun Kematian",
+      "name": "Ust. Marzuki & Tim",
+      "phone": "0857-7788-990 (24 Jam)"
+    }
+  },
+  "routinePrograms": [
+    {
+      "id": "tpa",
+      "title": "TPA & Tahfidz Anak",
+      "desc": "Pembinaan baca tulis Al-Qur'an metode Tilawati serta setoran hafalan Juz 30 setiap sore Senin - Jumat.",
+      "badge": "Santri: 85 Anak",
+      "icon": "BookOpen",
+      "color": "emerald"
+    },
+    {
+      "id": "majelis",
+      "title": "Majelis Taklim Ibu-ibu",
+      "desc": "Kajian fiqih wanita, tadarus bersama, dan arisan sosial setiap Selasa pagi pukul 09.00 WIB.",
+      "badge": "Peserta: 120 Jamaah",
+      "icon": "Users",
+      "color": "amber"
+    },
+    {
+      "id": "risma",
+      "title": "Remaja Islam (RISMA)",
+      "desc": "Pelatihan multimedia, hadroh, futsal ukhuwah, dan kepanitiaan hari besar Islam pemuda Sukatani.",
+      "badge": "Anggota: 40 Pemuda",
+      "icon": "Sparkles",
+      "color": "blue"
+    },
+    {
+      "id": "santunan",
+      "title": "Santunan & Beras Subuh",
+      "desc": "Penyaluran beras berkah dan santunan rutin untuk dhuafa serta yatim piatu di sekitar RW Sukatani.",
+      "badge": "35 KK Penerima",
+      "icon": "HandHeart",
+      "color": "rose"
+    }
+  ],
+  "agenda": [
+    {
+      "id": 1,
+      "category": "kajian",
+      "tag": "Rutin Ahad",
+      "date": "05 September 2026 • 04.45 WIB",
+      "title": "Bedah Kitab Riyadhus Shalihin",
+      "speaker": "Ust. H. Ridwan Mansyur",
+      "location": "Ruang Utama (Terbuka untuk Umum)",
+      "desc": "Membahas bab Ikhlas dan Niat dalam amalan harian seorang muslim.",
+      "themeColor": "emerald"
+    },
+    {
+      "id": 2,
+      "category": "sosial",
+      "tag": "Bakti Sosial",
+      "date": "12 September 2026 • 08.00 WIB",
+      "title": "Donor Darah & Cek Kesehatan Gratis",
+      "speaker": "PMI Kota & Puskesmas Cisolok",
+      "location": "Aula Serbaguna Masjid",
+      "desc": "Target 100 kantong darah. Cek gula darah gratis untuk lansia Sukatani.",
+      "themeColor": "rose"
+    },
+    {
+      "id": 3,
+      "category": "remaja",
+      "tag": "Risma Muda",
+      "date": "19 September 2026 • 13.30 WIB",
+      "title": "Workshop Syiar Dakwah Digital",
+      "speaker": "Tim Media Hijrah Sukatani",
+      "location": "Ruang Komputer TPA",
+      "desc": "Pelatihan desain poster dakwah dan teknik broadcast live kajian.",
+      "themeColor": "blue"
+    }
+  ],
+  "financial": {
+    "lastUpdate": "30 Agustus 2026",
+    "income": "Rp 24.850.000",
+    "expense": "Rp 16.320.000",
+    "balance": "Rp 48.910.000",
+    "buildingFundAllocated": "Rp 189.000.000",
+    "buildingFundTarget": "Rp 450.000.000",
+    "progressPercent": 42,
+    "recentTransactions": [
+      {
+        "title": "Infaq Tromol Kotak Jumat (28/08)",
+        "amount": "+ Rp 4.350.000",
+        "type": "in"
+      },
+      {
+        "title": "Listrik & Kebersihan Masjid (25/08)",
+        "amount": "- Rp 2.100.000",
+        "type": "out"
+      },
+      {
+        "title": "Honor Ustadz & Pengajar TPA (20/08)",
+        "amount": "- Rp 4.500.000",
+        "type": "out"
+      }
+    ]
   }
 }
