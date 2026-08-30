@@ -18,7 +18,7 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
         {/* Header Section */}
         <div className="relative z-10 text-center max-w-3xl mx-auto mb-12">
           <span className="text-amber-300 font-semibold text-xs uppercase tracking-wider bg-emerald-900/80 px-3.5 py-1.5 rounded-full border border-emerald-600/50 inline-flex items-center gap-1.5 mb-3">
-            <Milestone className="w-3.5 h-3.5" /> Visi Strategis 3 - 5 Tahun
+            <Milestone className="w-3.5 h-3.5" /> Visi Strategis 3 - 10 Tahun
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Program Jangka Panjang Masjid</h2>
           <p className="text-emerald-200 text-sm mt-3 leading-relaxed">
