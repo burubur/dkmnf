@@ -29,7 +29,73 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
         {/* Dua Pilar Utama */}
         <div className="relative z-10 grid lg:grid-cols-2 gap-8 mb-10">
           
-          {/* PILAR 1: PEMBANGUNAN MASJID */}
+          {/* PILAR 1: DAKWAH DAN SYI'AR */}
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-white/15 flex flex-col justify-between hover:border-emerald-400/50 transition">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
+                  <BookMarked className="w-6 h-6" />
+                </div>
+                <span className="text-xs font-mono font-bold bg-emerald-400/20 text-emerald-300 px-2.5 py-1 rounded-full border border-emerald-400/30">
+                  Pilar I: Dakwah dan Syi'ar
+                </span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">Ekspansi Kegiatan Keagamaan & Pembinaan Warga</h3>
+              <p className="text-slate-300 text-xs leading-relaxed mb-5">
+                Mengintensifkan pembinaan ruhani secara alamiah, membangun karakter masyarakat madani dari generasi anak-anak, remaja, hingga orang tua.
+              </p>
+
+              {/* Rincian Program Dakwah */}
+              <ul className="space-y-3.5 text-xs text-slate-200 mb-6">
+                <li className="flex items-start gap-2.5">
+                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <b className="text-white">Gerakan 1 Rumah 1 Hafidz Sukatani:</b>
+                    <p className="text-slate-300 text-[11px]">Bimbingan intensif tahfidz online & offline berjenjang untuk keluarga muslim.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <b className="text-white">Kajian Shubuh Gabungan Antar-Masjid & Musala:</b>
+                    <p className="text-slate-300 text-[11px]">Rotasi bulanan menghadirkan ulama dan santapan sarapan ukhuwah bersama.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <b className="text-white">Madrasah Diniyah Malam & Bahasa Arab Jamaah:</b>
+                    <p className="text-slate-300 text-[11px]">Kelas bahasa Al-Qur'an dan fiqih muamalah praktis bagi pekerja dan wiraswasta.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <b className="text-white">Kaderisasi Da'i Muda & Pelatihan Khotib Sukatani:</b>
+                    <p className="text-slate-300 text-[11px]">Mencetak khatib dan imam muda berkualitas dari pemuda lingkungan sekitar.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Target Realisasi */}
+            <div className="bg-emerald-950/60 p-4 rounded-xl border border-emerald-500/20 mt-2 flex items-center justify-between text-xs">
+              <div>
+                <div className="text-emerald-300 font-bold">Target Implementasi</div>
+                <div className="text-[11px] text-slate-300">Dimulai bertahap Triwulan IV 2026</div>
+              </div>
+              <button
+                type="button"
+                onClick={onOpenLayanan}
+                className="px-3 py-1.5 bg-[#059669] hover:bg-emerald-500 rounded-lg text-white font-semibold transition text-xs cursor-pointer"
+              >
+                Daftar Relawan Dakwah
+              </button>
+            </div>
+          </div>
+
+          {/* PILAR 2: WADAH & MEDIA */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-white/15 flex flex-col justify-between hover:border-amber-400/50 transition">
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -37,16 +103,16 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
                   <Hammer className="w-6 h-6" />
                 </div>
                 <span className="text-xs font-mono font-bold bg-amber-400/20 text-amber-300 px-2.5 py-1 rounded-full border border-amber-400/30">
-                  Pilar I: Fisik & Sarana
+                  Pilar II: Wadah & Media
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-2">Pembangunan & Revitalisasi Masjid</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Pembangunan & Revitalisasi Sarana Masjid</h3>
               <p className="text-slate-300 text-xs leading-relaxed mb-5">
-                Meningkatkan daya tampung jamaah sholat Jumat dan Idul Fitri serta kenyamanan ruang belajar anak-anak Sukatani.
+                Meningkatkan daya tampung jamaah ibadah sholat dan fasilitas ruang belajar anak-anak serta sentra interaksi warga Sukatani.
               </p>
 
-              {/* Rincian Proyek */}
+              {/* Rincian Sarana & Prasarana */}
               <ul className="space-y-3.5 text-xs text-slate-200 mb-6">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
@@ -104,72 +170,6 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
             </div>
           </div>
 
-          {/* PILAR 2: PENAMBAHAN KEGIATAN KEAGAMAAN */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-white/15 flex flex-col justify-between hover:border-emerald-400/50 transition">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
-                  <BookMarked className="w-6 h-6" />
-                </div>
-                <span className="text-xs font-mono font-bold bg-emerald-400/20 text-emerald-300 px-2.5 py-1 rounded-full border border-emerald-400/30">
-                  Pilar II: Dakwah & Syiar
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-2">Ekspansi Kegiatan Keagamaan Warga</h3>
-              <p className="text-slate-300 text-xs leading-relaxed mb-5">
-                Mengintensifkan pembinaan ruhani, menjangkau seluruh lapisan generasi di lingkungan Sukatani dari balita hingga lansia.
-              </p>
-
-              {/* Rincian Program Kegiatan Baru */}
-              <ul className="space-y-3.5 text-xs text-slate-200 mb-6">
-                <li className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <b className="text-white">Gerakan 1 Rumah 1 Hafidz Sukatani:</b>
-                    <p className="text-slate-300 text-[11px]">Bimbingan intensif tahfidz online & offline berjenjang untuk keluarga muslim.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <b className="text-white">Kajian Shubuh Gabungan Antar-Masjid & Musala:</b>
-                    <p className="text-slate-300 text-[11px]">Rotasi bulanan menghadirkan ulama nasional dan santapan sarapan ukhuwah bersama.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <b className="text-white">Madrasah Diniyah Malam & Bahasa Arab Jamaah:</b>
-                    <p className="text-slate-300 text-[11px]">Kelas bahasa Al-Qur'an dan fiqih muamalah praktis bagi pekerja dan wiraswasta.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <Sparkles className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <b className="text-white">Kaderisasi Da'i Muda & Pelatihan Khotib Sukatani:</b>
-                    <p className="text-slate-300 text-[11px]">Mencetak khatib dan imam muda berkualitas dari pemuda lingkungan sekitar.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            {/* Target Realisasi */}
-            <div className="bg-emerald-950/60 p-4 rounded-xl border border-emerald-500/20 mt-2 flex items-center justify-between text-xs">
-              <div>
-                <div className="text-emerald-300 font-bold">Target Implementasi</div>
-                <div className="text-[11px] text-slate-300">Dimulai bertahap Triwulan IV 2026</div>
-              </div>
-              <button
-                type="button"
-                onClick={onOpenLayanan}
-                className="px-3 py-1.5 bg-[#059669] hover:bg-emerald-500 rounded-lg text-white font-semibold transition text-xs cursor-pointer"
-              >
-                Daftar Relawan Dakwah
-              </button>
-            </div>
-          </div>
-
         </div>
 
         {/* Roadmap Timeline Bar */}
@@ -179,21 +179,21 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-            <div className="bg-emerald-950/70 p-3.5 rounded-xl border-l-4 border-amber-400">
-              <span className="text-[10px] font-mono text-amber-300 font-bold block mb-1">TAHAP 1 (2026)</span>
-              <div className="font-bold text-white mb-1">Fondasi & Ekspansi Kajian</div>
-              <p className="text-slate-300 text-[11px]">Legalitas IMB lantai 2, penggalangan dana wakaf, dan inisiasi program 1 Rumah 1 Hafidz.</p>
+            <div className="bg-emerald-950/70 p-3.5 rounded-xl border-l-4 border-emerald-400">
+              <span className="text-[10px] font-mono text-emerald-300 font-bold block mb-1">TAHAP 1 (2026)</span>
+              <div className="font-bold text-white mb-1">Fondasi Dakwah & Inisiasi Program</div>
+              <p className="text-slate-300 text-[11px]">Gerakan 1 Rumah 1 Hafidz, penggalangan dana wakaf sarana, serta legalitas rancang bangun.</p>
             </div>
 
-            <div className="bg-emerald-950/70 p-3.5 rounded-xl border-l-4 border-emerald-400">
-              <span className="text-[10px] font-mono text-emerald-300 font-bold block mb-1">TAHAP 2 (2027)</span>
-              <div className="font-bold text-white mb-1">Konstruksi & Pelatihan Da'i</div>
+            <div className="bg-emerald-950/70 p-3.5 rounded-xl border-l-4 border-amber-400">
+              <span className="text-[10px] font-mono text-amber-300 font-bold block mb-1">TAHAP 2 (2027)</span>
+              <div className="font-bold text-white mb-1">Konstruksi Wadah & Pelatihan Da'i</div>
               <p className="text-slate-300 text-[11px]">Penyelesaian fisik lantai dua, pembangunan ruang kelas TPA, dan wisuda angkatan pertama dai muda.</p>
             </div>
 
             <div className="bg-emerald-950/70 p-3.5 rounded-xl border-l-4 border-teal-400">
               <span className="text-[10px] font-mono text-teal-300 font-bold block mb-1">TAHAP 3 (2028)</span>
-              <div className="font-bold text-white mb-1">Kemandirian & Pusat Studi</div>
+              <div className="font-bold text-white mb-1">Kemandirian & Sentra Sosial Madani</div>
               <p className="text-slate-300 text-[11px]">Peresmian Islamic Center Nurul Falah, inkubasi Baitul Maal warga Sukatani mandiri.</p>
             </div>
           </div>
