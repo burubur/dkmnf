@@ -1,0 +1,56 @@
+{
+  "name": "Masjid Nurul Falah Sukatani",
+  "arabicName": "مَسْجِدُ نُوْرِ الْفَلَاحِ",
+  "tagline": "Pembangunan Masjid Permanen 2 Lantai",
+  "address": {
+    "kampung": "Kp. Sukatani RT 02 RW 05",
+    "kelurahan": "Wangunsari",
+    "kecamatan": "Cisolok",
+    "kabupaten": "Sukabumi",
+    "provinsi": "Jawa Barat",
+    "kodepos": "43366"
+  },
+  "coordinates": {
+    "latitude": -6.9458,
+    "longitude": 106.4489,
+    "qiblaAzimuth": 294.5
+  },
+  "specs": {
+    "landAreaM2": 500.0,
+    "buildingAreaM2": 344.0,
+    "groundFloorM2": 224.0,
+    "mezzanineFloorM2": 120.0,
+    "capacity": 360
+  },
+  "bankAccounts": [
+    {
+      "id": "bsi",
+      "bankName": "Bank Syariah Indonesia (BSI)",
+      "accountNumber": "7209876543",
+      "accountHolder": "DKM Masjid Nurul Falah Sukatani",
+      "isPrimary": true,
+      "color": "emerald"
+    },
+    {
+      "id": "bri",
+      "bankName": "Bank Rakyat Indonesia (BRI)",
+      "accountNumber": "0123-01-098765-53-1",
+      "accountHolder": "DKM Masjid Nurul Falah",
+      "isPrimary": false,
+      "color": "blue"
+    },
+    {
+      "id": "bca",
+      "bankName": "Bank Central Asia (BCA)",
+      "accountNumber": "8735123456",
+      "accountHolder": "Panitia Pembangunan Nurul Falah",
+      "isPrimary": false,
+      "color": "indigo"
+    }
+  ],
+  "contacts": {
+    "phone": "+6281234567890",
+    "whatsapp": "6281234567890",
+    "whatsappUrl": "https://wa.me/6281234567890?text=Assalamu%27alaikum%20Pengurus%20DKM%20Masjid%20Nurul%20Falah%2C%20saya%20ingin%20konfirmasi%20infaq%2Fwakaf"
+  }
+}

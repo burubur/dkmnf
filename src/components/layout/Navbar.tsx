@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Landmark, HeartHandshake } from "lucide-react";
 
-export function Navbar() {
+export interface NavbarProps {
+  onOpenInfaq?: () => void;
+}
+
+export function Navbar({ onOpenInfaq }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -11,8 +15,15 @@ export function Navbar() {
     { label: "Laporan Keuangan", href: "#laporan-keuangan" },
   ];
 
+  const handleInfaqClick = () => {
+    setMobileMenuOpen(false);
+    if (onOpenInfaq) {
+      onOpenInfaq();
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-emerald-900/30 bg-slate-950/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full border-b border-emerald-900/30 bg-slate-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <a href="#" className="flex items-center gap-3 group text-left">
@@ -46,10 +57,7 @@ export function Navbar() {
               variant="gold"
               size="sm"
               className="gap-1.5"
-              onClick={() => {
-                const el = document.querySelector("#infaq-wakaf");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={handleInfaqClick}
             >
               <HeartHandshake className="h-4 w-4" />
               <span>Infaq / Wakaf</span>
@@ -77,7 +85,7 @@ export function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-emerald-900/30 bg-slate-950/95 px-4 pt-2 pb-5 space-y-2 backdrop-blur-xl">
+        <div className="md:hidden border-b border-emerald-900/30 bg-slate-950/95 px-4 pt-2 pb-5 space-y-2 backdrop-blur-xl animate-in slide-in-from-top-2 duration-150">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -92,11 +100,7 @@ export function Navbar() {
             <Button
               variant="gold"
               className="w-full justify-center gap-2"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                const el = document.querySelector("#infaq-wakaf");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
+              onClick={handleInfaqClick}
             >
               <HeartHandshake className="h-4 w-4" />
               <span>Infaq / Wakaf</span>
