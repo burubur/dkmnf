@@ -67,24 +67,24 @@
     {
       "id": "kajian-bapak",
       "title": "Kajian Mingguan Bapak-bapak",
-      "desc": "Kajian fiqih muamalah, tafsir tematik, dan tadarus Al-Qur'an mingguan bersama bapak-bapak dan tokoh masyarakat.",
-      "badge": "Setiap Malam Ahad",
+      "desc": "Kajian fiqih, tafsir tematik, dan tadarus Al-Qur'an mingguan bersama bapak-bapak dan tokoh masyarakat setiap malam Kamis ba'da Maghrib hingga Isya.",
+      "badge": "Setiap Malam Kamis (Ba'da Maghrib - Isya)",
       "icon": "Users",
       "color": "blue"
     },
     {
       "id": "kajian-ibu",
       "title": "Kajian Mingguan Ibu-ibu",
-      "desc": "Kajian fiqih wanita, pembinaan akhlak keluarga sakinah, dan arisan ukhuwah majelis taklim ibu-ibu Sukatani.",
-      "badge": "Setiap Selasa Pagi",
+      "desc": "Kajian fiqih wanita, pembinaan keluarga sakinah, dan silaturahmi majelis taklim ibu-ibu setiap hari Jum'at pagi pukul 07.00 - 09.00 WIB.",
+      "badge": "Setiap Hari Jum'at (07.00 - 09.00 WIB)",
       "icon": "Sparkles",
       "color": "amber"
     },
     {
       "id": "kajian-bulanan",
       "title": "Kajian Bulanan",
-      "desc": "Tabligh akbar dan kajian gabungan bulanan dengan penceramah tamu, terbuka untuk seluruh jamaah dan warga sekitar.",
-      "badge": "Ahad Pertama Setiap Bulan",
+      "desc": "Tabligh akbar dan kajian gabungan bulanan dengan penceramah tamu setiap malam Kamis ba'da Maghrib hingga Isya sebulan sekali.",
+      "badge": "Malam Kamis (Ba'da Maghrib - Isya, 1x Sebulan)",
       "icon": "Calendar",
       "color": "rose"
     }
@@ -93,12 +93,12 @@
     {
       "id": 1,
       "category": "kajian",
-      "tag": "Rutin Ahad",
-      "date": "05 September 2026 • 04.45 WIB",
-      "title": "Bedah Kitab Riyadhus Shalihin",
+      "tag": "Rutin Malam Kamis",
+      "date": "Malam Kamis • Ba'da Maghrib WIB",
+      "title": "Kajian Fiqih & Bedah Kitab",
       "speaker": "Ust. H. Ridwan Mansyur",
       "location": "Ruang Utama (Terbuka untuk Umum)",
-      "desc": "Membahas bab Ikhlas dan Niat dalam amalan harian seorang muslim.",
+      "desc": "Membahas fiqih ibadah dan muamalah praktis keseharian warga Sukatani.",
       "themeColor": "emerald"
     },
     {
