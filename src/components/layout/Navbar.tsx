@@ -9,7 +9,6 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Jadwal Sholat", href: "#jadwal" },
     { label: "Program Rutin", href: "#program" },
     { label: "Program Jangka Panjang", href: "#program-panjang", highlight: true },
     { label: "Agenda & Warta", href: "#agenda" },
