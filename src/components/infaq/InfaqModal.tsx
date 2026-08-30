@@ -51,7 +51,7 @@ export function InfaqModal({ open, onOpenChange }: InfaqModalProps) {
             Rekening Resmi Masjid
           </DialogTitle>
           <DialogDescription>
-            Salurkan donasi, infaq, dan wakaf terbaik Anda untuk Masjid Nurul Falah Sukatani melalui rekening resmi berikut:
+            Salurkan donasi, infaq, waqaf terbaik anda melalui rekening resmi kami:
           </DialogDescription>
         </DialogHeader>
 
