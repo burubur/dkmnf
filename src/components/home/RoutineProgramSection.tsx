@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Users, Sparkles, HandHeart } from "lucide-react";
+import { BookOpen, Users, Sparkles, HandHeart, Calendar } from "lucide-react";
 import masjidData from "@/data/masjid.json";
 
 export function RoutineProgramSection() {
@@ -8,6 +8,7 @@ export function RoutineProgramSection() {
     Users: <Users className="w-6 h-6" />,
     Sparkles: <Sparkles className="w-6 h-6" />,
     HandHeart: <HandHeart className="w-6 h-6" />,
+    Calendar: <Calendar className="w-6 h-6" />,
   };
 
   return (

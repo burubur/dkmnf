@@ -57,35 +57,35 @@
   },
   "routinePrograms": [
     {
-      "id": "tpa",
-      "title": "TPA & Tahfidz Anak",
-      "desc": "Pembinaan baca tulis Al-Qur'an metode Tilawati serta setoran hafalan Juz 30 setiap sore Senin - Jumat.",
-      "badge": "Santri: 85 Anak",
+      "id": "ngaji-anak",
+      "title": "Belajar Mengaji Anak-anak",
+      "desc": "Pembinaan baca tulis Al-Qur'an, Iqro, tajwid, adab, dan setoran hafalan surat pendek bagi anak-anak warga Sukatani.",
+      "badge": "Setiap Sore (Senin - Jumat)",
       "icon": "BookOpen",
       "color": "emerald"
     },
     {
-      "id": "majelis",
-      "title": "Majelis Taklim Ibu-ibu",
-      "desc": "Kajian fiqih wanita, tadarus bersama, dan arisan sosial setiap Selasa pagi pukul 09.00 WIB.",
-      "badge": "Peserta: 120 Jamaah",
+      "id": "kajian-bapak",
+      "title": "Kajian Mingguan Bapak-bapak",
+      "desc": "Kajian fiqih muamalah, tafsir tematik, dan tadarus Al-Qur'an mingguan bersama bapak-bapak dan tokoh masyarakat.",
+      "badge": "Setiap Malam Ahad",
       "icon": "Users",
-      "color": "amber"
-    },
-    {
-      "id": "risma",
-      "title": "Remaja Islam (RISMA)",
-      "desc": "Pelatihan multimedia, hadroh, futsal ukhuwah, dan kepanitiaan hari besar Islam pemuda Sukatani.",
-      "badge": "Anggota: 40 Pemuda",
-      "icon": "Sparkles",
       "color": "blue"
     },
     {
-      "id": "santunan",
-      "title": "Santunan & Beras Subuh",
-      "desc": "Penyaluran beras berkah dan santunan rutin untuk dhuafa serta yatim piatu di sekitar RW Sukatani.",
-      "badge": "35 KK Penerima",
-      "icon": "HandHeart",
+      "id": "kajian-ibu",
+      "title": "Kajian Mingguan Ibu-ibu",
+      "desc": "Kajian fiqih wanita, pembinaan akhlak keluarga sakinah, dan arisan ukhuwah majelis taklim ibu-ibu Sukatani.",
+      "badge": "Setiap Selasa Pagi",
+      "icon": "Sparkles",
+      "color": "amber"
+    },
+    {
+      "id": "kajian-bulanan",
+      "title": "Kajian Bulanan",
+      "desc": "Tabligh akbar dan kajian gabungan bulanan dengan penceramah tamu, terbuka untuk seluruh jamaah dan warga sekitar.",
+      "badge": "Ahad Pertama Setiap Bulan",
+      "icon": "Calendar",
       "color": "rose"
     }
   ],
