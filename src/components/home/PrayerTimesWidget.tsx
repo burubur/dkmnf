@@ -24,9 +24,6 @@ export function PrayerTimesWidget() {
               Waktu otomatis disesuaikan dengan koordinat Sukatani dan Kemenag RI
             </p>
           </div>
-          <span className="text-xs font-semibold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
-            Status: Normal (Adzan Tepat Waktu)
-          </span>
         </div>
 
         {/* Prayer Cards Grid */}

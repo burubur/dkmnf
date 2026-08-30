@@ -35,7 +35,9 @@ export function Navbar({ onOpenInfaq }: NavbarProps) {
             </div>
             <div>
               <div className="font-bold text-lg leading-tight text-[#064e3b]">Masjid Nurul Falah</div>
-              <div className="text-xs text-slate-500 font-medium tracking-wide">Lingkungan Sukatani</div>
+              <div className="text-xs text-slate-500 font-medium tracking-wide">
+                Kp. Sukatani, Rt 05, Rw 03, Wangunsari
+              </div>
             </div>
           </a>
 
