@@ -59,8 +59,8 @@
     {
       "id": "ngaji-anak",
       "title": "Belajar Mengaji Anak-anak",
-      "desc": "Pembinaan baca tulis Al-Qur'an, Iqro, tajwid, adab, dan setoran hafalan surat pendek bagi anak-anak warga Sukatani.",
-      "badge": "Setiap Sore (Senin - Jumat)",
+      "desc": "Pembinaan baca tulis Al-Qur'an, Iqro, tajwid, adab, dan setoran hafalan surat pendek bagi anak-anak setiap hari setelah sholat Maghrib hingga Isya.",
+      "badge": "Setiap Hari (Ba'da Maghrib - Isya)",
       "icon": "BookOpen",
       "color": "emerald"
     },
