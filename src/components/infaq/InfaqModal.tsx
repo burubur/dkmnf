@@ -45,13 +45,13 @@ export function InfaqModal({ open, onOpenChange }: InfaqModalProps) {
         <DialogHeader>
           <div className="flex items-center gap-2 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-1">
             <HeartHandshake className="h-4 w-4" />
-            <span>Rekening Resmi Pembangunan</span>
+            <span>Infaq & Wakaf</span>
           </div>
           <DialogTitle className="text-xl sm:text-2xl font-extrabold text-slate-100">
-            Infaq & Wakaf Pembangunan
+            Rekening Resmi Masjid
           </DialogTitle>
           <DialogDescription>
-            Salurkan donasi, infaq, dan wakaf terbaik Anda untuk pembangunan Masjid Nurul Falah Sukatani 2 Lantai melalui rekening resmi berikut:
+            Salurkan donasi, infaq, dan wakaf terbaik Anda untuk Masjid Nurul Falah Sukatani melalui rekening resmi berikut:
           </DialogDescription>
         </DialogHeader>
 
