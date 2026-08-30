@@ -1,36 +1,39 @@
 import React, { useState } from "react";
+import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
-import { Card, CardContent } from "@/components/ui/card";
+import { HeroSection } from "@/components/home/HeroSection";
 import { InfaqModal } from "@/components/infaq/InfaqModal";
 
 export function App() {
   const [isInfaqOpen, setIsInfaqOpen] = useState(false);
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-[#090d16] text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
-      {/* 1. Header Navigation Bar */}
+    <div className="min-h-screen w-full flex flex-col bg-slate-50 text-slate-800 selection:bg-emerald-600 selection:text-white font-sans antialiased">
+      {/* 1. Top Bar */}
+      <TopBar />
+
+      {/* 2. Header Navigation Bar */}
       <Navbar onOpenInfaq={() => setIsInfaqOpen(true)} />
 
-      {/* 2. Main Content Body */}
-      <main className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <Card className="max-w-xl w-full border-emerald-500/30 bg-slate-950/70 text-center shadow-[0_0_60px_rgba(5,150,105,0.15)] backdrop-blur-2xl">
-          <CardContent className="py-16 px-6 flex flex-col items-center justify-center">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-amber-400 drop-shadow-[0_0_30px_rgba(245,158,11,0.45)] select-none"
-              style={{ fontFamily: "'Amiri', serif", direction: "rtl" }}
-            >
-              مَسْجِدُ نُوْرِ الْفَلَاحِ
-            </h1>
-          </CardContent>
-        </Card>
+      {/* 3. Hero Section with .bg-pattern background */}
+      <main className="flex-1">
+        <HeroSection onOpenInfaq={() => setIsInfaqOpen(true)} />
       </main>
 
-      {/* 3. Infaq & Wakaf Bank Accounts Modal */}
+      {/* 4. Infaq & Wakaf Bank Accounts Modal */}
       <InfaqModal open={isInfaqOpen} onOpenChange={setIsInfaqOpen} />
 
-      {/* 4. Footer */}
-      <footer className="py-6 border-t border-slate-800/60 text-center text-xs text-slate-500">
-        <p>© 2026 DKM Masjid Nurul Falah Sukatani, Cisolok, Sukabumi. All rights reserved.</p>
+      {/* 5. Footer */}
+      <footer className="bg-[#064e3b] text-slate-300 text-xs py-8 border-t border-[#065f46]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+          <div>
+            <div className="text-white font-bold text-sm mb-1">Masjid Nurul Falah Sukatani</div>
+            <p className="text-emerald-200/80 text-xs">Kp. Sukatani RT 02 RW 05, Kelurahan Wangunsari, Cisolok, Kabupaten Sukabumi, Jawa Barat.</p>
+          </div>
+          <div className="text-emerald-300/80 text-xs">
+            © 2026 DKM Masjid Nurul Falah. Amanah & Transparan.
+          </div>
+        </div>
       </footer>
     </div>
   );
