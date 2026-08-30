@@ -17,7 +17,7 @@ export function RoutineProgramSection() {
         <span className="text-[#059669] font-semibold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
           Pilar Kemakmuran Rutin
         </span>
-        <h2 className="text-3xl font-extrabold text-slate-900 mt-2">Program Operasional Saat Ini</h2>
+        <h2 className="text-3xl font-extrabold text-slate-900 mt-2">Program Rutin</h2>
         <p className="text-slate-600 text-sm mt-1">
           Aktivitas harian dan mingguan yang sedang aktif di Masjid Nurul Falah Sukatani.
         </p>
