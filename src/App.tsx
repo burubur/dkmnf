@@ -3,8 +3,8 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/home/HeroSection";
 import { PrayerTimesWidget } from "@/components/home/PrayerTimesWidget";
-import { LongTermProgramSection } from "@/components/home/LongTermProgramSection";
 import { RoutineProgramSection } from "@/components/home/RoutineProgramSection";
+import { LongTermProgramSection } from "@/components/home/LongTermProgramSection";
 import { AgendaSection } from "@/components/home/AgendaSection";
 import { FinancialReportSection } from "@/components/home/FinancialReportSection";
 import { OrganizationSection } from "@/components/home/OrganizationSection";
@@ -32,24 +32,37 @@ export function App() {
       {/* 2. Header Navigation Bar */}
       <Navbar onOpenInfaq={() => setIsInfaqOpen(true)} />
 
-      {/* 3. Main Content Sections */}
+      {/* 3. Main Content Sections in Menu Order */}
       <main className="flex-1">
+        {/* Hero Section */}
         <HeroSection onOpenInfaq={() => setIsInfaqOpen(true)} />
+
+        {/* 1. Jadwal Sholat */}
         <PrayerTimesWidget />
+
+        {/* 2. Program Rutin */}
+        <RoutineProgramSection />
+
+        {/* 3. Program Jangka Panjang */}
         <LongTermProgramSection
           onOpenWakaf={() => setIsInfaqOpen(true)}
           onOpenLayanan={() => setIsLayananOpen(true)}
         />
-        <RoutineProgramSection />
+
+        {/* 4. Agenda & Warta */}
         <AgendaSection onRegisterEvent={handleRegisterEvent} />
+
+        {/* 5. Transparansi Kas */}
         <FinancialReportSection />
+
+        {/* Layanan & Sekretariat */}
         <OrganizationSection />
       </main>
 
       {/* 4. Footer */}
       <Footer />
 
-      {/* 5. Modals */}
+      {/* 5. Interactive Modals */}
       <InfaqModal open={isInfaqOpen} onOpenChange={setIsInfaqOpen} />
       <EventModal
         open={isEventOpen}
