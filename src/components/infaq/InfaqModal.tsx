@@ -7,7 +7,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Copy, Check, HeartHandshake, CreditCard, MessageCircle } from "lucide-react";
+import { Copy, Check, HeartHandshake, Landmark, MessageCircle } from "lucide-react";
 import masjidData from "@/data/masjid.json";
 
 export interface InfaqModalProps {
@@ -16,15 +16,28 @@ export interface InfaqModalProps {
 }
 
 export function InfaqModal({ open, onOpenChange }: InfaqModalProps) {
-  const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [copiedAccount, setCopiedAccount] = useState<boolean>(false);
+  const [copiedCode, setCopiedCode] = useState<boolean>(false);
 
-  const handleCopy = (id: string, text: string) => {
-    if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText(text);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId(null), 2000);
+  const account = masjidData.bankAccounts[0];
+
+  const handleCopyAccount = () => {
+    if (typeof navigator !== "undefined" && navigator.clipboard && account) {
+      navigator.clipboard.writeText(account.accountNumber);
+      setCopiedAccount(true);
+      setTimeout(() => setCopiedAccount(false), 2000);
     }
   };
+
+  const handleCopyCode = () => {
+    if (typeof navigator !== "undefined" && navigator.clipboard && account?.bankCode) {
+      navigator.clipboard.writeText(account.bankCode);
+      setCopiedCode(true);
+      setTimeout(() => setCopiedCode(false), 2000);
+    }
+  };
+
+  if (!account) return null;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -35,77 +48,93 @@ export function InfaqModal({ open, onOpenChange }: InfaqModalProps) {
             <span>Rekening Resmi Pembangunan</span>
           </div>
           <DialogTitle className="text-xl sm:text-2xl font-extrabold text-slate-100">
-            Infaq & Wakaf Masjid Nurul Falah
+            Infaq & Wakaf Pembangunan
           </DialogTitle>
           <DialogDescription>
-            Salurkan infaq, sedekah, dan wakaf terbaik Anda untuk pembangunan Masjid Nurul Falah Sukatani 2 Lantai melalui rekening resmi berikut:
+            Salurkan donasi, infaq, dan wakaf terbaik Anda untuk pembangunan Masjid Nurul Falah Sukatani 2 Lantai melalui rekening resmi berikut:
           </DialogDescription>
         </DialogHeader>
 
-        {/* Bank Account List */}
-        <div className="space-y-3 my-4">
-          {masjidData.bankAccounts.map((account) => {
-            const isCopied = copiedId === account.id;
-            return (
-              <div
-                key={account.id}
-                className="relative flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-emerald-900/40 bg-slate-900/80 hover:border-emerald-500/40 transition-colors gap-3"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-950/60 border border-emerald-800/40 text-emerald-400 shrink-0 mt-0.5 sm:mt-0">
-                    <CreditCard className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-bold text-sm text-slate-200">
-                        {account.bankName}
-                      </span>
-                      {account.isPrimary && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase tracking-wider">
-                          Utama
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-base sm:text-lg font-mono font-bold text-amber-300 tracking-wider my-0.5">
-                      {account.accountNumber}
-                    </div>
-                    <div className="text-xs text-slate-400">
-                      a.n. <span className="text-slate-300 font-medium">{account.accountHolder}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <Button
-                  variant={isCopied ? "default" : "outline"}
-                  size="sm"
-                  className="gap-1.5 shrink-0 self-end sm:self-center"
-                  onClick={() => handleCopy(account.id, account.accountNumber.replace(/[^0-9]/g, ""))}
-                >
-                  {isCopied ? (
-                    <>
-                      <Check className="h-3.5 w-3.5 text-emerald-300" />
-                      <span className="text-xs">Tersalin!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="h-3.5 w-3.5" />
-                      <span className="text-xs">Salin Rekening</span>
-                    </>
-                  )}
-                </Button>
+        {/* BSI Bank Account Card */}
+        <div className="my-4 p-5 rounded-2xl border border-emerald-500/40 bg-gradient-to-b from-slate-900/90 to-slate-950/90 shadow-xl space-y-4">
+          <div className="flex items-center justify-between border-b border-emerald-900/40 pb-3">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-800 text-white shadow-md shadow-emerald-950">
+                <Landmark className="h-6 w-6 text-amber-300" />
               </div>
-            );
-          })}
+              <div>
+                <span className="font-bold text-base text-slate-100 block">
+                  {account.bankName}
+                </span>
+                <span className="text-xs text-emerald-400 font-medium">
+                  Bank Syariah Indonesia
+                </span>
+              </div>
+            </div>
+
+            {account.bankCode && (
+              <div className="flex items-center gap-1.5 bg-slate-900/90 border border-slate-700/60 px-2.5 py-1 rounded-lg">
+                <span className="text-[11px] text-slate-400">Kode Bank:</span>
+                <span className="text-xs font-mono font-bold text-amber-300">{account.bankCode}</span>
+                <button
+                  type="button"
+                  onClick={handleCopyCode}
+                  className="text-slate-400 hover:text-slate-200 transition-colors p-0.5"
+                  title="Salin Kode Bank"
+                >
+                  {copiedCode ? <Check className="h-3 w-3 text-emerald-400" /> : <Copy className="h-3 w-3" />}
+                </button>
+              </div>
+            )}
+          </div>
+
+          <div>
+            <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-1">
+              Nomor Rekening
+            </span>
+            <div className="flex items-center justify-between bg-slate-950/80 border border-emerald-900/60 rounded-xl p-3 sm:p-3.5">
+              <span className="text-xl sm:text-2xl font-mono font-extrabold text-amber-300 tracking-wider">
+                {account.accountNumber}
+              </span>
+              <Button
+                variant={copiedAccount ? "default" : "gold"}
+                size="sm"
+                className="gap-1.5 text-xs px-3"
+                onClick={handleCopyAccount}
+              >
+                {copiedAccount ? (
+                  <>
+                    <Check className="h-3.5 w-3.5" />
+                    <span>Tersalin!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="h-3.5 w-3.5" />
+                    <span>Salin No. Rek</span>
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+
+          <div>
+            <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold block mb-0.5">
+              Atas Nama Rekening
+            </span>
+            <span className="text-sm sm:text-base font-bold text-slate-100 uppercase tracking-wide">
+              {account.accountHolder}
+            </span>
+          </div>
         </div>
 
-        {/* Footer Confirmation CTA */}
+        {/* Footer WhatsApp Confirmation */}
         <div className="pt-3 border-t border-slate-800/70 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
-          <span>Harap konfirmasi transfer donasi Anda ke panitia:</span>
+          <span>Konfirmasi transfer donasi Anda ke panitia:</span>
           <a
             href={masjidData.contacts.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-700/50 text-emerald-300 hover:text-emerald-200 hover:bg-emerald-900/60 font-semibold transition-colors"
           >
             <MessageCircle className="h-4 w-4 text-emerald-400" />
             <span>Konfirmasi WhatsApp</span>

@@ -26,26 +26,11 @@
     {
       "id": "bsi",
       "bankName": "Bank Syariah Indonesia (BSI)",
-      "accountNumber": "7209876543",
-      "accountHolder": "DKM Masjid Nurul Falah Sukatani",
+      "bankCode": "045",
+      "accountNumber": "7203516578",
+      "accountHolder": "MASJID NURUL FALAH SUKATANI",
       "isPrimary": true,
       "color": "emerald"
-    },
-    {
-      "id": "bri",
-      "bankName": "Bank Rakyat Indonesia (BRI)",
-      "accountNumber": "0123-01-098765-53-1",
-      "accountHolder": "DKM Masjid Nurul Falah",
-      "isPrimary": false,
-      "color": "blue"
-    },
-    {
-      "id": "bca",
-      "bankName": "Bank Central Asia (BCA)",
-      "accountNumber": "8735123456",
-      "accountHolder": "Panitia Pembangunan Nurul Falah",
-      "isPrimary": false,
-      "color": "indigo"
     }
   ],
   "contacts": {
