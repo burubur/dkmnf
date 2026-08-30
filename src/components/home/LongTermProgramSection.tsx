@@ -22,7 +22,7 @@ export function LongTermProgramSection({ onOpenWakaf, onOpenLayanan }: LongTermP
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Program Jangka Panjang</h2>
           <p className="text-emerald-200 text-sm mt-3 leading-relaxed">
-            Peta jalan DKM Nurul Falah Sukatani yang menitikberatkan pada akselerasi pembangunan fisik sarana ibadah serta ekspansi intensitas kegiatan keagamaan masyarakat.
+            Roadmap DKM Nurul Falah Sukatani yang menitikberatkan pada proses alamiah pembinaan karakter masyarakat yang madani melalui kegiatan sosial berdasarkan konsep Islam yang sesungguhnya.
           </p>
         </div>
 
